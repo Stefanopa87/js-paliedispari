@@ -1,0 +1,68 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PALI e DISPARI</title>
+
+    <style media="screen">
+
+    body{
+      background-color: grey;
+    }
+    h1{
+      text-align: center;
+      color: blue;
+      margin-top: 50px;
+    }
+
+    #pari{
+      color: green;
+    }
+
+    #dispari{
+      color: red;
+    }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">PALI e DISPARI</h1>
+
+    <script type="text/javascript">
+
+      function sommaNumeri(num1, num2) {
+        var risultato = num1 + num2;
+        return risultato;
+        }
+
+      function prova(){
+        var somma = sommaNumeri(49, 2);
+        console.log(somma); // 51
+      }
+
+      // prova();
+
+      // PAROLA PALINDROMA
+
+      function isPalindrome(str) {
+        str = str.toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+        return str === str.split('').reverse().join('');
+      }
+
+
+      function es1(){
+        var str = isPalindrome(prompt("dimmi una parola, scopriamo se è palindroma"));
+        console.log(str);
+
+        if (str == true){
+          document.getElementById('title').innerHTML = "SIIIII, la parola è palindroma";
+        } else {
+          document.getElementById('title').innerHTML = "peccato, la parola non è palindroma";
+        }
+      }
+
+      // es1();
+
+
+    </script>
+  </body>
+</html>
