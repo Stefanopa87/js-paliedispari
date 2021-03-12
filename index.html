@@ -25,6 +25,7 @@
   </head>
   <body>
     <h1 id="title">PALI e DISPARI</h1>
+    <h1 id="title2"></h1>
 
     <script type="text/javascript">
 
@@ -82,10 +83,20 @@
         var sum = addNumber(numberUser, numberComputer);
         console.log(sum);
 
+        var result
+
         if (sum % 2 == 0){
-          document.getElementById('title').innerHTML = "ha vinto chi ha scelto PARI";
+          result = "pari";
+          document.getElementById('title').innerHTML = "il risultato è PARI";
         } else {
-          document.getElementById('title').innerHTML = "ha vinto chi ha scelto DISPARI";
+          result = "dispari";
+          document.getElementById('title').innerHTML = "il risultato è DISPARI";
+        }
+
+        if (question == result){
+          document.getElementById('title2').innerHTML = "hai Vinto";
+        } else {
+          document.getElementById('title2').innerHTML = "non hai vinto";
         }
       }
 
